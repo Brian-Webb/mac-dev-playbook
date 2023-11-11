@@ -6,12 +6,29 @@ configure_terminal: true
 configure_osx: true
 
 # Set to 'true' to configure the Dock via dockutil.
-configure_dock: false
-dockitems_remove: []
-# - Launchpad
-# - TV
-# - Podcasts
-# - 'App Store'
+configure_dock: true
+dockitems_remove: [
+  - Launchpad
+  - Safari
+  - Messages
+  - Mail
+  - Maps
+  - Photos
+  - FaceTime
+  - Calendar
+  - Contacts
+  - Reminders
+  - Notes
+  - TV
+  - Music
+  - Podcasts
+  - News
+  - Keynote
+  - Numbers
+  - Pages
+  - 'App Store'
+  - 'System Settings'
+]
 dockitems_persist: []
 # - name: "Sublime Text"
 #   path: "/Applications/Sublime Text.app/"
@@ -24,9 +41,9 @@ sudoers_custom_config: ''
 #   # Allow users in admin group to use sudo with no password.
 #   %admin ALL=(ALL) NOPASSWD: ALL
 
-dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
+dotfiles_repo: https://github.com/Brian-Webb/dotfiles.git
 dotfiles_repo_accept_hostkey: true
-dotfiles_repo_local_destination: ~/Development/GitHub/dotfiles
+dotfiles_repo_local_destination: ~/Development/Personal/dotfiles
 dotfiles_files:
   - .zshrc
   - .gitignore
@@ -38,7 +55,13 @@ homebrew_installed_packages:
   # - ansible # Installed via Pip.
   - autoconf
   - bash-completion
+  - ca-certificates
+  - cask
+  - composer
+  - dnsmasq
+  - docker-completion
   - doxygen
+  - emacs
   - gettext
   - gifsicle
   - git
@@ -46,14 +69,21 @@ homebrew_installed_packages:
   - go
   - gpg
   - httpie
+  - imagemagick
   - iperf
   - libevent
   - sqlite
+  - mariadb
   - mcrypt
+  - mysql
+  - nginx
   - nmap
   - node
   - nvm
   - php
+  - phpmd
+  - postgresql
+  - sqlite
   - ssh-copy-id
   - cowsay
   - readline
@@ -61,7 +91,10 @@ homebrew_installed_packages:
   - pv
   - wget
   - wrk
+  - zlib
+  - zsh
   - zsh-history-substring-search
+  - zstd
 
 homebrew_taps:
   - homebrew/core
@@ -69,17 +102,21 @@ homebrew_taps:
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
+  - arc
   - chromedriver
+  - discord
   - docker
-  - dropbox
+  - figma
   - firefox
   - google-chrome
-  - handbrake
-  - licecap
-  - sequel-ace
+  - iterm2
+  - obsidian
+  - phpstorm
   - slack
   - sublime-text
   - transmit
+  - visual-studio-code
+  - zoom
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
@@ -91,7 +128,10 @@ osx_script: "~/.osx --no-restart"
 # Install packages from other package managers.
 # Note: You are responsible for making sure the required package managers are
 # installed, eg. through homebrew.
-composer_packages: []
+composer_packages: [
+  "laravel/installer",
+  "laravel/valet"
+]
 # - name: drush
 #   state: present # present/absent, default: present
 #   version: "^8.1" # default: N/A
