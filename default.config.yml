@@ -128,10 +128,9 @@ osx_script: "~/.osx --no-restart"
 # Install packages from other package managers.
 # Note: You are responsible for making sure the required package managers are
 # installed, eg. through homebrew.
-composer_packages: [
-  "laravel/installer",
-  "laravel/valet"
-]
+composer_packages:
+  - laravel/installer
+  - laravel/valet
 # - name: drush
 #   state: present # present/absent, default: present
 #   version: "^8.1" # default: N/A
