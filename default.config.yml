@@ -121,7 +121,6 @@ homebrew_cask_apps:
   - tidal
   - transmit
   - visual-studio-code
-  - ytmdesktop-youtube-music
   - zoom
 
 # See `geerlingguy.mas` role documentation for usage instructions.
