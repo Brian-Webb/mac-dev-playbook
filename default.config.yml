@@ -75,7 +75,6 @@ homebrew_installed_packages:
   - sqlite
   - mariadb
   - mcrypt
-  - mysql
   - nginx
   - nmap
   - node
