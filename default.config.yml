@@ -102,8 +102,11 @@ homebrew_taps:
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
+  - adobe-creative-cloud
   - arc
   - chromedriver
+  - clion
+  - datagrip
   - discord
   - docker
   - figma
@@ -112,10 +115,14 @@ homebrew_cask_apps:
   - iterm2
   - obsidian
   - phpstorm
+  - pycharm
+  - rider
   - slack
   - sublime-text
+  - tidal
   - transmit
   - visual-studio-code
+  - ytmdesktop-youtube-music
   - zoom
 
 # See `geerlingguy.mas` role documentation for usage instructions.
