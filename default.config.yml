@@ -1,6 +1,4 @@
 ---
-downloads: ~/.ansible-downloads/
-
 configure_dotfiles: true
 configure_terminal: true
 configure_osx: true
@@ -35,7 +33,7 @@ dockitems_persist: []
 #   pos: 5
 
 configure_sudoers: false
-sudoers_custom_config: ''
+sudoers_custom_config: ""
 # Example:
 # sudoers_custom_config: |
 #   # Allow users in admin group to use sudo with no password.
@@ -44,6 +42,7 @@ sudoers_custom_config: ''
 dotfiles_repo: https://github.com/Brian-Webb/dotfiles.git
 dotfiles_repo_accept_hostkey: true
 dotfiles_repo_local_destination: ~/Development/Personal/dotfiles
+dotfiles_repo_version: master # Replace with your default branch
 dotfiles_files:
   - .zshrc
   - .gitignore
@@ -83,8 +82,8 @@ homebrew_installed_packages:
   - phpmd
   - postgresql
   - sqlite
+  - pngpaste
   - ssh-copy-id
-  - cowsay
   - readline
   - openssl
   - pv
@@ -95,9 +94,7 @@ homebrew_installed_packages:
   - zsh-history-substring-search
   - zstd
 
-homebrew_taps:
-  - homebrew/core
-  - homebrew/cask
+homebrew_taps: []
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
@@ -123,7 +120,7 @@ homebrew_cask_apps:
   - visual-studio-code
   - zoom
 
-# See `geerlingguy.mas` role documentation for usage instructions.
+# See `geerlingguy.mac.mas` role documentation for usage instructions.
 mas_installed_apps: []
 mas_email: ""
 mas_password: ""
@@ -154,7 +151,7 @@ pip_packages: []
 
 # Set to 'true' to configure Sublime Text.
 configure_sublime: false
-sublime_base_path: '~/Library/Application Support/Sublime Text'
+sublime_base_path: "~/Library/Application Support/Sublime Text"
 sublime_config_path: "Packages/User"
 sublime_package_control:
   - "DocBlockr"
@@ -163,12 +160,12 @@ sublime_package_control:
   - "GitHub Flavored Markdown Preview"
   - "Jinja2"
   - "Package Control"
-  - "PHP-Twig"
   - "Pretty JSON"
   - "SublimeLinter"
   - "SublimeLinter-contrib-yamllint"
+  - "Theme - Cobalt2"
   - "TrailingSpaces"
-  - "WordCount"
+  - "WordingStatus"
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
 post_provision_tasks: []
